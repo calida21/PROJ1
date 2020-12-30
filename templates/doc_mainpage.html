@@ -1,0 +1,36 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOCTOR'S MAIN PAGE</title>
+	<link rel="stylesheet" type="text/css" href="% static 'css/doctor_main.css' %">
+
+</head>
+<body>
+	<h3>Please select the patient who's details you want to check</h3>
+	<div>
+
+       <h3> WELCOME {{name}}</h3> 
+
+		<button type = "button" class="btn">PID0001</button><br>
+		<button type = "button" class="btn">PID0002</button><br>
+		<button type = "button" class="btn">PID0003</button><br>
+		<button type = "button" class="btn">PID0004</button><br>
+		<button type = "button" class="btn">PID0005</button><br>
+		<button type = "button" class="btn">PID0006</button><br>
+		<button type = "button" class="btn">PID0007</button><br>
+		<button type = "button" class="btn">PID0008</button><br>
+		<button type = "button" class="btn">PID0009</button><br>
+		<button type = "button" class="btn">PID0010</button><br>
+		<button type = "button" class="btn">PID0011</button><br>
+		<button type = "button" class="btn">PID0012</button><br>
+		<button type = "button" class="btn">PID0013</button><br>
+        <button type = "button" class="btn">PID0014</button><br>
+        
+        <a href="{% url 'logout' %}">LOGOUT</a>
+	
+	</div>
+
+</body>
+</html>

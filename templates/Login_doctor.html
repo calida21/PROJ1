@@ -1,0 +1,32 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/doctor_login.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto&display=swap' rel='stylesheet'>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="first">
+    <legend ><br>Doctor <br>Login </legend><br>
+        <input type="email" placeholder="Email" name="email_doc"><br><br>
+        <input type="password" placeholder="Password" name="psw_doc"><br><br><br>
+        <button type="submit"> LOGIN</button><br><br>
+        <a href="{% url 'Regdoctor' %}"> NEW USER? REGISTER </a> 
+        {% if messages %}
+        {% for msg in messages %}
+        <h3>{{msg}}</h3>
+        {% endfor %}
+        {% endif %}
+        
+	</div>
+</form>
+</body>
+
+</html>

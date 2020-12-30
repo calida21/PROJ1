@@ -1,0 +1,14 @@
+.btn{
+    color: blue;
+    width: 100px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.btn:hover{color:red;}
+
+h3{
+text-align:center;
+color: red;
+}

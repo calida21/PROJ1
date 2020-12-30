@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<body>
+    {% if request.session.emailp%}
+    {{request.session.emailp}}&nbsp;&nbsp; <a href="{% url 'Loginpagep' %}">Logout</a>
+    {% endif %}
+   
+    <hr>
+    <br>
+    <a href="{% url 'Regpatient' %}">Registration as patient</a> &nbsp;&nbsp; |
+    <a href="{% url 'Loginpagepatient' %}">Login as pateint </a> |
+
+    <a href="{% url 'Regdoctor' %}">Registration as doctorc</a> &nbsp;&nbsp; |
+    <a href="{% url 'Loginpagedoctor' %}">Login as doctor </a>
+    
+</body>
+</html>
